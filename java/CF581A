@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class A_Socks
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int out1 = 0;
+        int out2 = 0;
+        out1 = min(a, b);
+        out2 = (max(a, b)-out1)/2;
+        
+        System.out.println(out1 + " " + out2);
+    }
+    
+    public static int min(int a, int b){
+        if(a > b) return b;
+        return a;
+    }
+    
+    public static int max(int a, int b){
+        if(a > b) return a;
+        return b;
+    }
+}
